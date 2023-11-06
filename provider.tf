@@ -21,7 +21,7 @@ backend "remote" {
 		organization = "lanchonetebairro"
 
 		workspaces {
-			name = "AWSEKS"
+			name = "lanchonete-workspace"
 		}
 	}
 }
