@@ -2,6 +2,8 @@
 
 Este projeto usa o Terraform para criar e gerenciar a infraestrutura necessária para implantar um cluster do Amazon Elastic Kubernetes Service (EKS) na AWS. A infraestrutura é gerenciada através do Terraform e as implantações são automatizadas usando o GitHub Actions e o Terraform Cloud.
 
+____
+
 ## Pré-requisitos
 
 Certifique-se de ter os seguintes pré-requisitos antes de prosseguir:
