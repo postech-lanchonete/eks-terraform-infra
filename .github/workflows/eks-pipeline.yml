@@ -1,10 +1,13 @@
-name: "01-EKS"
+name: "eks-pipeline"
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   Plan:
-    uses: RekhuGopal/aws_eks_labs/.github/workflows/aws_tf_plan.yml@main
+    uses: ./.github/workflows/aws_tf_plan.yml
     with:
       gh_environment: dev
     secrets:
@@ -12,7 +15,7 @@ jobs:
 
   Apply:
     needs: Plan
-    uses: RekhuGopal/aws_eks_labs/.github/workflows/aws_tf_appy.yml@main
+    uses: ./.github/workflows/aws_tf_appy.yml
     with:
       gh_environment: dev
     secrets:
